@@ -1,0 +1,28 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" type="text/css" href="second-page-style.css"/> -->
+	<link rel="stylesheet" type="text/css" href="first-page-style.css" id="css1" />
+	<script type="text/javascript" src="common.js"></script>
+</head>
+
+<body>
+	<div id='first-input' class='div-search' align="center">
+		<h4>铁路换乘方案查询</h4>
+		<span>出发城市:</span>
+		<input type="text" id="src" />
+		<span>到达城市:</span>
+		<input type="text" id="dest" />
+		<button type="button" onclick="loadTest()">搜索</button>
+		<!-- 实际应当是 loadJson-->
+		<!-- windows下测试为loadTest -->
+		</hr>
+		<div id="sort">
+		</div>
+	</div>
+	<div id="result" class='result'>
+	</div>
+</body>
+
+</html>
