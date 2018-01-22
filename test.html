@@ -2,22 +2,26 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="second-page-style.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="first-page-style.css" id="css1" /> -->
+    <script type="text/javascript" src="common.js"></script>
+    <meta charset="utf-8">
     <script>
-        function test() {
-            var str=document.getElementById('1').value;
-            console.log(str);
-            if (str.indexOf('库中没有此车站') != -1) {
-                alert('包含');
-            }
-            else alert('不包含');
+        function showError(DataJson) {
+            document.getElementById("result").innerHTML = "";
+            var obj = document.getElementById("result").innerHTML;
+            obj += "<table class='result'><tbody><tr text-align:center;><th rowspan=2>路线</th><th rowspan=2>所需时间</th><th rowspan=2>出发时间</th><th rowspan=2>到达时间</th><th colspan=4>票价(<font color=\"#FF0000\"><b>参考</b></font>)</th><th rowspan=2>转车地点</th><th rowspan=2>详细路线</th></tr><tr><th>硬座</th><Th>软座</th><th>硬卧</th><th>软卧</th></tr>";
+            obj += "<tr><td colspan='10' align='center'>" + DataJson + "</td></tr>";
+            document.getElementById("result").innerHTML = obj;
         }
     </script>
 </head>
 
 <body>
-    <input id='1' >
-    <button onclick="test()"></button>
+    <button onclick="showError('库中没有此车站：北京北')"></button>
     <!-- 库中没有此车站：北京北 -->
+    <div id="result" class='result'>
+    </div>
 </body>
 
 </html>

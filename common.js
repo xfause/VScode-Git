@@ -55,6 +55,7 @@ function showError(DataJson){
     var obj = document.getElementById("result").innerHTML;
     obj += "<table class='result'><tbody><tr text-align:center;><th rowspan=2>路线</th><th rowspan=2>所需时间</th><th rowspan=2>出发时间</th><th rowspan=2>到达时间</th><th colspan=4>票价(<font color=\"#FF0000\"><b>参考</b></font>)</th><th rowspan=2>转车地点</th><th rowspan=2>详细路线</th></tr><tr><th>硬座</th><Th>软座</th><th>硬卧</th><th>软卧</th></tr>";
     obj += "<tr>"+DataJson+"</tr>";
+    document.getElementById("result").innerHTML = obj
 }
 function change_sort(obj){
     if (obj.value=='P'){
@@ -110,7 +111,7 @@ function ajaxData(sortBy){
     }
     var src = getSrc();
     var dest = getDest();
-    // url http://localhost:8080/rest/trest?src=�ɶ�&dest=����&sortBy=
+    // url http://localhost:8080/rest/trest?src=成都&dest=深圳&sortBy=
     var url = '/rest/trest?src=' + src + '&dest=' + dest +'&sortBy='+sortBy;
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
