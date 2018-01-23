@@ -54,7 +54,7 @@ function showError(DataJson){
     document.getElementById("result").innerHTML = "";
     var obj = document.getElementById("result").innerHTML;
     obj += "<table class='result'><tbody><tr text-align:center;><th rowspan=2>路线</th><th rowspan=2>所需时间</th><th rowspan=2>出发时间</th><th rowspan=2>到达时间</th><th colspan=4>票价(<font color=\"#FF0000\"><b>参考</b></font>)</th><th rowspan=2>转车地点</th><th rowspan=2>详细路线</th></tr><tr><th>硬座</th><Th>软座</th><th>硬卧</th><th>软卧</th></tr>";
-    obj += "<tr>"+DataJson+"</tr>";
+    obj += "<tr><td colspan='10' align='center'>"+DataJson+"</td></tr>";
     document.getElementById("result").innerHTML = obj
 }
 function change_sort(obj){
