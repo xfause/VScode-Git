@@ -64,7 +64,7 @@ function change_sort(obj){
     else if (obj.value=='D'){
         ajaxData('D');
     }
-    else if (obj,value=='A'){
+    else if (obj.value=='A'){
         ajaxData('A');
     }
     else ajaxData('');
